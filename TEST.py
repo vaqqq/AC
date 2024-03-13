@@ -1,5 +1,5 @@
 #put "bad file" anywhere in the files array
-#"@nexawicker"
+# credits:"@nexawicker"
 
 allowedFiles = ["file1", "file2", "file3", "file4", "file5", "file6"]
 files = ["file1", "file2", "file3", "file4", "file5", "file6", "bad file"]
