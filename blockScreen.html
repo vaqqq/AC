@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="blockScreen.css">
+    <script src="/index.js"></script>
+    <title>blockScreen</title>
+</head>
+<body>
+    <div class="block-screen">
+        <div class="warning">Suspicious file <span id="fileName"></span> detected!</div>
+        <div class="credits">© VC Anti Cheat</div>
+    </div>
+    <script>
+        const { ipcRenderer } = require('electron');
+
+        ipcRenderer.on('file-name', (event, fileName) => {
+            document.getElementById('fileName').innerText = fileName;
+        });
+    </script>
+</body>
+</html>
